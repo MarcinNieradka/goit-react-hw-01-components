@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { getRandomColor } from './../utils/getRandomColor';
+import './Statistics.css';
 
 // export const Statistics = ({ title, stats: { label, percentage } }) => {
 //   return (
@@ -17,7 +18,7 @@ export const Statistics = ({ title, stats }) => {
 
   return (
     <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+      {title && <h4 className="title">{title}</h4>}
       <ul className="stat-list">
         {stats.map(item => (
           <li
@@ -26,7 +27,7 @@ export const Statistics = ({ title, stats }) => {
             style={{ backgroundColor: getRandomColor() }}
           >
             <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage} </span>
+            <span className="percentage">{item.percentage} %</span>
           </li>
         ))}
       </ul>
