@@ -1,9 +1,10 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import clsx from 'clsx';
 import './TransactionHistory.css';
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
+    <table className={clsx('transaction-history')}>
       <thead>
         <tr>
           <th>Type</th>
@@ -22,4 +23,15 @@ export const TransactionHistory = ({ items }) => {
       </tbody>
     </table>
   );
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    })
+  ),
 };

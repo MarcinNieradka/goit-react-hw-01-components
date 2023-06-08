@@ -2,18 +2,18 @@
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-thead {
+.transaction-history thead {
   background-color: lightblue;
   padding: 1rem 3rem;
   text-align: center;
 }
 
-tr:nth-child(even) {
+.transaction-history tr:nth-child(even) {
   background-color: lightgrey;
 }
 
-td,
-th {
+.transaction-history td,
+.transaction-history th {
   font-size: 1rem;
   padding: 1rem 3rem;
   text-align: center;

@@ -22,7 +22,7 @@ export const App = () => {
       }}
     >
       {/*------------------------01--------------------------*/}
-      <h4>Zad 01</h4>
+
       <Profile
         name={username}
         avatar={avatar}
@@ -33,18 +33,15 @@ export const App = () => {
 
       {/*------------------------02--------------------------*/}
 
-      <h4>Zad 02</h4>
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
 
       {/*------------------------03--------------------------*/}
 
-      <h4>Zad 03</h4>
       <FriendList friends={friends} />
 
       {/*------------------------04--------------------------*/}
 
-      <h4>Zad 04</h4>
       <TransactionHistory items={transactions} />
     </div>
   );

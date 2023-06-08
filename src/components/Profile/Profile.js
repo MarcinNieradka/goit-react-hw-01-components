@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './Profile.css';
+import clsx from 'clsx';
 
 export const Profile = ({
   name = 'John Doe',
@@ -7,28 +8,27 @@ export const Profile = ({
   tag,
   location = 'Planet Earth',
   stats: { followers, views, likes },
-  // stats,
 }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar"></img>
-        <p className="name">{name}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+    <div className={clsx('profile')}>
+      <div className={clsx('description')}>
+        <img src={avatar} alt="User avatar" className={clsx('avatar')}></img>
+        <p className={clsx('name')}>{name}</p>
+        <p className={clsx('tag')}>@{tag}</p>
+        <p className={clsx('location')}>{location}</p>
       </div>
-      <ul className="stats">
+      <ul className={clsx('stats')}>
         <li>
-          <span className="profileLabel">Followers</span>
-          <span className="quantity">{followers}</span>
+          <span className={clsx('profileLabel')}>Followers</span>
+          <span className={clsx('quantity')}>{followers}</span>
         </li>
         <li>
-          <span className="profileLabel">Views</span>
-          <span className="quantity">{views}</span>
+          <span className={clsx('profileLabel')}>Views</span>
+          <span className={clsx('quantity')}>{views}</span>
         </li>
         <li>
-          <span className="profileLabel">Likes</span>
-          <span className="quantity">{likes}</span>
+          <span className={clsx('profileLabel')}>Likes</span>
+          <span className={clsx('quantity')}>{likes}</span>
         </li>
       </ul>
     </div>
